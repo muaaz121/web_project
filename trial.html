@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #333;
+    }
+
+    header {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 60px 40px;
+      background: white;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+      color: #777;
+    }
+
+    .hero-text .btn {
+      background: #e63946;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .hero-image {
+      flex: 1;
+      padding-left: 40px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 60px 40px;
+      background: white;
+      margin: 30px 0;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .feature {
+      width: 30%;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+    }
+
+    .team {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .team-member {
+      width: 30%;
+    }
+
+    .team-member img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-image {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+      .features, .team {
+        flex-direction: column;
+        align-items: center;
+      }
+      .feature, .team-member {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Freelancer</div>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Work</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>INTELLIGENCE IS NOTHING WITHOUT AMBITION.</h1>
+      <p>We're small but impressive creative agency.</p>
+      <a href="#" class="btn">READ MORE</a>
+    </div>
+    <div class="hero-image">
+      <img src="/mnt/data/4d23b24c-1422-430e-8546-6148ab3747d8.jpg" alt="Hero Image">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="features">
+      <div class="feature">
+        <h3>PEACE OF MIND.</h3>
+        <p>Your safety with us. The privacy and confidentiality of your information is guaranteed.</p>
+      </div>
+      <div class="feature">
+        <h3>FREE. ACTUALLY FREE</h3>
+        <p>No hidden gimmicks, no traps. You can try our services completely free.</p>
+      </div>
+      <div class="feature">
+        <h3>SIMPLE PAYMENTS.</h3>
+        <p>Our system is super easy to use. Pay only for what you need, when you need it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>PORTFOLIO.</h2>
+    <p>We are small, but strong team. From logos and print to websites, we have pride. Sending concepts within 24hrs without gimmicks. The same care and passion you find in our print design finds its way straight to your browser screen.</p>
+  </section>
+
+  <section class="section">
+    <h2>OUR TEAM.</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Joey">
+        <h4>JOEY</h4>
+        <p>Web Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Matt">
+        <h4>MATT</h4>
+        <p>Web Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Mike">
+        <h4>MIKE</h4>
+        <p>Copywriter</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
