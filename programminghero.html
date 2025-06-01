@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programming Hero Header</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo img {
+      height: 24px;
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 18px;
+      color: #1a1a3d;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 16px;
+    }
+    .nav-links a:first-child {
+      color: #c026d3; /* purple/pink for হোম */
+      font-weight: bold;
+    }
+      body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(to bottom, #fde7f5, #f5f1fc);
+      color: #1a1a3d;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .highlight {
+      background: linear-gradient(to right, #d946ef, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-section h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 18px;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .hero-section .btn {
+      padding: 14px 30px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(to right, #ec4899, #f97316);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-section .btn:hover {
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="data:image/jpeg;base64,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" alt="Flowbite Logo">
+      <span class="logo-text">Programming Hero</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">হোম</a>
+      <a href="#">বুটক্যাম্প ক্লাস</a>
+      <a href="#">মেইন কোর্স</a>
+      <a href="#">ব্লগ</a>
+      <a href="#">PH Books</a>
+    </nav>
+  </header>
+    <section class="hero-section">
+    <h1>
+      <span class="highlight">ওয়েব ডেভেলপমেন্ট</span> শুরু করুন
+    </h1>
+    <h2>১৪ দিনের ফ্রি বুটক্যাম্প 🚀</h2>
+    <p>
+      প্রোগ্রামিং হিরোর ডেভেলপমেন্ট বুটক্যাম্পের ১২ তম ব্যাচের এনরোলমেন্ট শুরু ১০ই জুন থেকে<br>
+      এবং এনরোলমেন্ট শেষ ২৪ই জুন রাত ১১ টা ৫৯ মিনিটে
+    </p>
+    <a href="#" class="btn">এখনই জয়েন করুন</a>
+  </section>
+  
+</body>
+</html>
