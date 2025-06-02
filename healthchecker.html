@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<style>
+    /* General */
+.body {
+  background-color: #f5f5f7;
+  font-family: sans-serif;
+  color: #222;
+  margin: 0;
+  padding-bottom: 70px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.greeting-bold {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin: 0;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+/* Date Navigation */
+.date-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.today-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Metrics Section */
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 6px;
+  border-style: solid;
+}
+
+.orange-border {
+  border-color: #fdba74;
+}
+
+.blue-border {
+  border-color: #93c5fd;
+}
+
+.circle-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.orange-text {
+  color: #ea580c;
+}
+
+.blue-text {
+  color: #2563eb;
+}
+
+.circle-label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Sleep Activity */
+.section {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sleep-box {
+  background-color: #ffe4e6;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.sleep-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.tag {
+  background-color: #f87171;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 9999px;
+}
+
+.sleep-times p {
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+/* Checklist */
+.checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checklist {
+  margin-top: 12px;
+}
+
+.checklist-item {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.checklist-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-box {
+  background-color: #ef4444;
+  padding: 10px;
+  border-radius: 9999px;
+  color: white;
+}
+
+.check-title {
+  font-weight: 500;
+  margin: 0;
+}
+
+.check-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.check-icon {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.check-icon.dark {
+  color: #000;
+}
+
+.small-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.nav-item {
+  color: #555;
+  font-weight: 500;
+}
+
+.nav-item.active {
+  color: #dc2626;
+}
+
+</style>
+<body class="body">
+
+  <!-- Header -->
+  <div class="container">
+    <div class="header">
+      <div>
+        <p class="greeting">Hello Tanim</p>
+        <p class="greeting-bold">Good Morning!</p>
+      </div>
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="profile-pic" />
+    </div>
+  </div>
+
+  <!-- Date Navigation -->
+  <div class="date-nav">
+    <button>&lt;</button>
+    <span class="today-text">Today</span>
+    <button>&gt;</button>
+  </div>
+
+  <!-- Metrics -->
+  <div class="metrics">
+    <div class="card">
+      <p class="card-title">Calories</p>
+      <div class="circle orange-border">
+        <span class="circle-text orange-text">600</span>
+      </div>
+      <p class="circle-label orange-text">Remaining</p>
+    </div>
+    <div class="card">
+      <p class="card-title">Water</p>
+      <div class="circle blue-border">
+        <span class="circle-text blue-text">1.75</span>
+      </div>
+      <p class="circle-label blue-text">Liters</p>
+    </div>
+  </div>
+
+  <!-- Sleep Activity -->
+  <div class="section">
+    <p class="section-title">Sleep Activity</p>
+    <div class="sleep-box">
+      <div class="sleep-details">
+        <div>
+          <p class="small-text">Sleep Score</p>
+          <p class="score">73</p>
+          <span class="tag">Good</span>
+        </div>
+        <div class="sleep-times">
+          <p>🌙 11:00 PM</p>
+          <p>☀️ 8:00 AM</p>
+          <p>⏰ 7hrs 30min</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daily Checklist -->
+  <div class="section">
+    <div class="checklist-header">
+      <p class="section-title">Daily Checklist</p>
+      <p class="small-text">2/4 Completed</p>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checklist-left">
+          <div class="icon-box">🍽️</div>
+          <div>
+            <p class="check-title">Log your meals</p>
+            <p class="check-date">Tue, Jan 14, 2025</p>
+          </div>
+        </div>
+        <div class="check-icon">✔️</div>
+      </div>
+
+      <div class="checklist-item">
+        <div class="checklist-left">
+          <div class="icon-box">🏋️</div>
+          <div>
+            <p class="check-title">Complete your workout</p>
+            <p class="check-date">Tue, Jan 14, 2025</p>
+          </div>
+        </div>
+        <div class="check-icon">✔️</div>
+      </div>
+
+      <div class="checklist-item">
+        <div class="checklist-left">
+          <div class="icon-box">🚶</div>
+          <div>
+            <p class="check-title">Steps</p>
+            <p class="check-date">Tue, Jan 14, 2025</p>
+          </div>
+        </div>
+        <div class="check-icon dark">✔️</div>
+      </div>
+
+      <div class="checklist-item">
+        <div class="checklist-left">
+          <div class="icon-box">📅</div>
+          <div>
+            <p class="check-title">Check-in complete</p>
+            <p class="check-date">Tue, Jan 14, 2025</p>
+          </div>
+        </div>
+        <div class="check-icon dark">✔️</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <div class="nav-item active">📊<br>Dashboard</div>
+    <div class="nav-item">📈<br>Progress</div>
+    <div class="nav-item">📝<br>Log Food</div>
+    <div class="nav-item">🏋️<br>Workout</div>
+    <div class="nav-item">⋯<br>More</div>
+  </div>
+
+</body>
+</html>
